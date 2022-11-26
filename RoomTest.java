@@ -24,23 +24,9 @@ public class RoomTest {
     assertEquals("king", room.getType());
   }
 
-  @Test
-  public void testGetRoomInvalidCoucou() {
-    Exception exception = assertThrows(
-      IllegalArgumentException.class,
-      () -> {
-        new Room("coucou");
-      }
-    );
-    assertEquals(
-      "No room of type 'coucou' can be created",
-      exception.getMessage()
-    );
-  }
-
   @Test(expected = IllegalArgumentException.class)
-  public void testGetRoomInvalidBoubou() {
-    Room room = new Room("coucou");
+  public void testGetRoomInvalidCoucou() {
+    new Room("coucou");
   }
 
   // getPrice

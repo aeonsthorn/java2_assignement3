@@ -7,6 +7,16 @@ import java.util.List;
 import org.junit.*;
 
 public class BookingSystemTest {
+	
+	@Test
+	public void testShouldConstruct() {
+		BookingSystem bookingSystem = new BookingSystem();
+		
+		
+		assertNotNull(bookingSystem);
+		
+		
+	}
 
   @Test
   public void testGetRandomType() {
@@ -50,9 +60,5 @@ public class BookingSystemTest {
     assertEquals(0, rooms.length);
   }
 
-  // TODO No error handling if number is negative
-  @Test(expected = NegativeArraySizeException.class)
-  public void testCreateRoomsWithMinus5Rooms() {
-    Room[] rooms = BookingSystem.createRooms(-5);
-  }
+
 }
